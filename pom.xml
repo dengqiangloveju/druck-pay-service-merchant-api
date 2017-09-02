@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.druck.pay</groupId>
+		<artifactId>druck-pay</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../druck-pay/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>druck-pay-service-merchant-api</artifactId>
+	<packaging>jar</packaging>
+	<name>druck-pay-service-merchant-api</name>
+	<url>http://maven.apache.org</url>
+
+	<dependencies>
+		<!-- hibernate4 -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-annotations</artifactId>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<finalName>druck-pay-service-merchant-api</finalName>
+		<resources>
+			<!-- 指定 src/main/resources下所有文件及文件夹为资源文件 -->
+			<resource>
+				<directory>src/main/resources</directory>
+				<targetPath>${project.build.directory}/classes</targetPath>
+				<filtering>true</filtering>
+				<includes>
+					<include>**/*</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+</project>
